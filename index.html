@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <span class=" h-8 text-xl font-bold font-serif flex items-center justify-center uppercase" id="element"></span>
+    <div id="clock" class="relative h-[40vw] w-[40vw] mx-auto bg-cyan-400"
+        style="background: url('./8c65Lyrzi.jpg') no-repeat;background-size: 100%;">
+
+
+        <div class="absolute top-[25.8%] left-[47.9%] h-[9vw] bg-black opacity-75 w-[3%]" id="hour"></div>
+        <div class="absolute top-[18.5%] left-[48.4%] h-[12vw] bg-black w-[2%] opacity-85" id="minute"></div>
+        <div class="absolute top-[16%] left-[48.8%] h-[13vw] bg-black w-[1%] opaci-70" id="second"></div>
+
+    </div>
+    <script src="./clock.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    // Create Typed instance outside the interval
+    var typed = new Typed('#element', {
+        strings: ['Time and Tide,', 'Wait for none.'],
+        typeSpeed: 70,
+    });
+
+    // Update content inside the interval
+    setInterval(() => {
+        // Reset and start typing again
+        typed.reset();
+        typed.start();
+    }, 9000);
+</script>
+</body>
+
+</html>
